@@ -11,6 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  open_file: ^3.0.1
+  url_launcher: ^5.4.11
 
 dev_dependencies:
   flutter_test:
@@ -21,7 +23,9 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+   assets:
 
+    - assets/images/video.png
   # To add assets to your package, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
