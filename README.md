@@ -10,10 +10,11 @@ A flutter package for viewing all files.
 
 
 <img src="https://github.com/walkingtree/file_list_previewer/blob/master/assets/images/2020-08-25().jpg" width="200">
+ <br />
 <img src="https://github.com/walkingtree/file_list_previewer/blob/master/assets/images/2020-08-25.jpg" width="200">
 
 
-#### Properties
+#### Properties:
 
 ```final List<File> attachmentList;``` // Pass list of files  <br />
 ```final List<String> filePaths;``` // Pass list of filepaths <br />
