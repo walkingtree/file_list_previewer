@@ -32,7 +32,7 @@ A flutter package for viewing all files.
 >    videoFileImage : videoFileImage  <br />
 >    width : 10  <br />
 >    height : 10 <br />
->    removeImage <br />
+>    removeImage :  removeImage() <br />
 >  );
 
 
