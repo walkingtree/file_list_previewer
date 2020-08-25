@@ -1,14 +1,36 @@
 # file_list_previewer
 
-A new Flutter package project.
+A flutter package for viewing all files.
 
-## Getting Started
+## Features:
+*View all filetypes
+*Remove files from list
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+### Getting Started
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+
+<img src="" width="200">
+
+
+#### Properties
+
+'''   final List<File> attachmentList; ''' // Pass list of files
+'''  final List<String> filePaths; ''' // Pass list of filepaths
+'''   final Function removeImage; ''' // Pass a function which removes the file from the list of files/filepaths.
+'''    final String videoFileImage; ''' //Pass a image to show as video thumbnail
+'''    final double width; ''' //  Pass width for the widget
+'''   final double height; ''' // Pass height for the widget
+
+
+##### Usage:
+
+>FileListPreviewer( <br />
+>    this.attachmentList, <br />
+>    this.filePaths, <br />
+>    this.videoFileImage = "assets/images/video.png", <br />
+>    this.width = 300, <br />
+>    this.height = 100, <br />
+>    this.removeImage, <br />
+>  );
+
+

@@ -35,16 +35,22 @@ class _FileListPreviewerState extends State<FileListPreviewer> {
   List<File> _filePathList = [];
 
   bool _isLoading = false;
+  //Method to remove the file attached
   void _removeImage(File pickedFile) {
     setState(() {
-      _filePathList.remove(pickedFile);
+      _filePathList.remove(pickedFile); //removing image from the local list
     });
-    widget.removeImage(pickedFile);
+    widget.removeImage(
+        pickedFile); // removing image from the list passed as data to file_list_previewer.
   }
 
   @override
   void initState() {
     super.initState();
+
+    //If the input is filepaths,this condition converts filepaths to files else in other cases the input files are taken as input.
+    // _filePathList is the local list of the data came as input,based on the input conditions checks and assigns data to the local list.
+
     if (widget.attachmentList == null && widget.filePaths != null) {
       // for (var i = 0; i < widget.filePaths.length ?? 0; i++) {
       //   File filepath = File(widget.filePaths[i]);
@@ -61,6 +67,8 @@ class _FileListPreviewerState extends State<FileListPreviewer> {
       _filePathList = widget.attachmentList;
     }
   }
+
+  //Widget returns a listview builder
 
   @override
   Widget build(BuildContext context) {
@@ -79,20 +87,26 @@ class _FileListPreviewerState extends State<FileListPreviewer> {
             child: _isLoading == true
                 ? Center(
                     child: CircularProgressIndicator(
-                      backgroundColor: Colors.red,
+                      backgroundColor: Colors.blue,
                     ),
                   )
-                : ListView.builder(
+                :
+
+                //ListView builder builds all the attached files which passed as input.
+                ListView.builder(
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
                     itemCount: _filePathList != null ? _filePathList.length : 0,
                     itemBuilder: (BuildContext context, int index) {
+                      // Finding the file extension to show appropriate thumbnail for that file type.
+                      //File extension is found with substring of the filename
                       var extn = _filePathList[index].toString().substring(
                           _filePathList[index].toString().lastIndexOf('.'),
                           _filePathList[index].toString().length - 1);
                       return GestureDetector(
                         child: Stack(
                           children: [
+                            //Conditions checks for image files and shows the image with help of image widget
                             (extn == ".jpg" || extn == ".jpeg" || extn == ".png"
                                 ? new Container(
                                     width: 100.0,
@@ -106,7 +120,9 @@ class _FileListPreviewerState extends State<FileListPreviewer> {
                                           ),
                                     ),
                                   )
-                                : (extn == '.mp4'
+                                :
+                                //Condition checks for video files and shows the thumbnail for video i.e, widget.videoFileImage
+                                (extn == '.mp4'
                                     ? Container(
                                         width: 100.0,
                                         height: 100.0,
@@ -116,7 +132,9 @@ class _FileListPreviewerState extends State<FileListPreviewer> {
                                               AssetImage(widget.videoFileImage),
                                           fit: BoxFit.scaleDown,
                                         ))
-                                    : Material(
+                                    :
+                                    //In all other cases the default file icon card is shown.
+                                    Material(
                                         type: MaterialType.transparency,
                                         child: SingleChildScrollView(
                                           child: Container(
@@ -146,8 +164,8 @@ class _FileListPreviewerState extends State<FileListPreviewer> {
                               right: 0,
                               child: widget.removeImage != null
                                   ? GestureDetector(
-                                      onTap: () =>
-                                          _removeImage(_filePathList[index]),
+                                      onTap: () => _removeImage(_filePathList[
+                                          index]),         //calls the _removeImage function to remove the file from list.
                                       child: Card(
                                         elevation: 10,
                                         color: Colors.white,
@@ -163,6 +181,7 @@ class _FileListPreviewerState extends State<FileListPreviewer> {
                           ],
                         ),
                         onTap: () async {
+                          //OnTap the file is opened with appropriate filetype with  OpenFile  plugin.
                           OpenFile.open(_filePathList[index].path);
                         },
                       );
