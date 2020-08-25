@@ -16,12 +16,12 @@ A flutter package for viewing all files.
 
 #### Properties:
 
-```final List<File> attachmentList;``` *// Pass list of files*<br />
-```final List<String> filePaths;``` *// Pass list of filepaths*<br />
-```final Function removeImage;``` *// Pass a function which removes the file from the list of files/filepaths.*<br />
-```final String videoFileImage;``` *//Pass a image to show as video thumbnail* <br />
-```final double width;``` *//Pass width for the widget*<br />
-```final double height;``` *//Pass height for the widget*<br />
+```final List<File> attachmentList;```    *// Pass list of files*<br />
+```final List<String> filePaths;```       *// Pass list of filepaths*<br />
+```final Function removeImage;```         *// Pass a function which removes the file from the list of files/filepaths.*<br />
+```final String videoFileImage;```        *//Pass a image to show as video thumbnail* <br />
+```final double width;```                 *//Pass width for the widget*<br />
+```final double height;```                *//Pass height for the widget*<br />
 
 
 ##### Usage:
