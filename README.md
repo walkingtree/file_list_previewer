@@ -27,12 +27,12 @@ A flutter package for viewing all files.
 ##### Usage:
 
 >FileListPreviewer( <br />
->    this.attachmentList, <br />
->    this.filePaths, <br />
->    this.videoFileImage = "assets/images/video.png", <br />
->    this.width = 300, <br />
->    this.height = 100, <br />
->    this.removeImage, <br />
+>    attachmentList <br />
+>    filePaths <br />
+>    videoFileImage  <br />
+>    width  <br />
+>    height <br />
+>    removeImage <br />
 >  );
 
 
