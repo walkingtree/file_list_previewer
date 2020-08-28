@@ -1,6 +1,6 @@
 # file_list_previewer
 
-A flutter package for viewing all files.
+A flutter package for viewing all local files.
 
 ## Features:
 * View all filetypes

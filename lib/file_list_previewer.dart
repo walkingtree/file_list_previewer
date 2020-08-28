@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:open_file/open_file.dart';
 import 'dart:io';
 import 'dart:ui' as ui;
+
 class FileListPreviewer extends StatefulWidget {
   // The list of Files
   final List<File> attachmentList;
@@ -54,11 +55,6 @@ class _FileListPreviewerState extends State<FileListPreviewer> {
     // _filePathList is the local list of the data came as input,based on the input conditions checks and assigns data to the local list.
 
     if (widget.attachmentList == null && widget.filePaths != null) {
-      // for (var i = 0; i < widget.filePaths.length ?? 0; i++) {
-      //   File filepath = File(widget.filePaths[i]);
-      //   _filePathList.add(filepath);
-      // }
-      // setState(() {});
       widget.filePaths.forEach(
         (element) {
           File filepath = File(element);
@@ -74,19 +70,14 @@ class _FileListPreviewerState extends State<FileListPreviewer> {
 
   @override
   Widget build(BuildContext context) {
-    // setState(() {
-    //   _filePathList = [];
-    // });
-
-
     return MediaQuery(
       data: new MediaQueryData.fromWindow(ui.window),
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: SingleChildScrollView(
-key:  ValueKey('abc'),
+          key: ValueKey('singlechildkey'),
           child: Container(
-            key:  ValueKey('abcd'),
+            key: ValueKey('containerkey'),
             height: widget.height,
             width: widget.width,
             child: _isLoading == true
@@ -99,7 +90,7 @@ key:  ValueKey('abc'),
 
                 //ListView builder builds all the attached files which passed as input.
                 ListView.builder(
-                  key:  ValueKey('abcde'),
+                    key: ValueKey('listviewkey'),
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
                     itemCount: _filePathList != null ? _filePathList.length : 0,
@@ -156,7 +147,6 @@ key:  ValueKey('abc'),
                                                   Text(
                                                     "File",
                                                     style: TextStyle(
-
                                                         fontWeight:
                                                             FontWeight.bold,
                                                         fontSize: 20),
@@ -172,7 +162,7 @@ key:  ValueKey('abc'),
                               child: widget.removeImage != null
                                   ? GestureDetector(
                                       onTap: () => _removeImage(_filePathList[
-                                          index]),         //calls the _removeImage function to remove the file from list.
+                                          index]), //calls the _removeImage function to remove the file from list.
                                       child: Card(
                                         elevation: 10,
                                         color: Colors.white,
