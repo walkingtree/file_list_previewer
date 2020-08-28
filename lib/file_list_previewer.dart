@@ -3,7 +3,7 @@ library file_list_previewer;
 import 'package:flutter/material.dart';
 import 'package:open_file/open_file.dart';
 import 'dart:io';
-
+import 'dart:ui' as ui;
 class FileListPreviewer extends StatefulWidget {
   // The list of Files
   final List<File> attachmentList;
@@ -15,6 +15,7 @@ class FileListPreviewer extends StatefulWidget {
   final String videoFileImage;
   //The width of the preview
   final double width;
+  final key;
   //The width of the preview
   final double height;
 
@@ -24,6 +25,7 @@ class FileListPreviewer extends StatefulWidget {
     this.videoFileImage = "assets/images/video.png",
     this.width = 300,
     this.height = 100,
+    this.key,
     this.removeImage,
   });
 
@@ -76,12 +78,15 @@ class _FileListPreviewerState extends State<FileListPreviewer> {
     //   _filePathList = [];
     // });
 
-    return SingleChildScrollView(
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
+
+    return MediaQuery(
+      data: new MediaQueryData.fromWindow(ui.window),
+      child: Directionality(
+        textDirection: TextDirection.rtl,
+        child: SingleChildScrollView(
+key:  ValueKey('abc'),
+          child: Container(
+            key:  ValueKey('abcd'),
             height: widget.height,
             width: widget.width,
             child: _isLoading == true
@@ -94,6 +99,7 @@ class _FileListPreviewerState extends State<FileListPreviewer> {
 
                 //ListView builder builds all the attached files which passed as input.
                 ListView.builder(
+                  key:  ValueKey('abcde'),
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
                     itemCount: _filePathList != null ? _filePathList.length : 0,
@@ -148,8 +154,9 @@ class _FileListPreviewerState extends State<FileListPreviewer> {
                                                     MainAxisAlignment.center,
                                                 children: [
                                                   Text(
-                                                    "File ",
+                                                    "File",
                                                     style: TextStyle(
+
                                                         fontWeight:
                                                             FontWeight.bold,
                                                         fontSize: 20),
@@ -188,7 +195,7 @@ class _FileListPreviewerState extends State<FileListPreviewer> {
                     },
                   ),
           ),
-        ],
+        ),
       ),
     );
   }
