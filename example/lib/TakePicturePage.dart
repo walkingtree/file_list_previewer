@@ -49,7 +49,7 @@ class _TakePicturePageState extends State<TakePicturePage> {
 
       if (_selectedIndex == 0) {
         final imgPath =
-        join((await getTemporaryDirectory()).path, '${fileName}.png');
+            join((await getTemporaryDirectory()).path, '${fileName}.png');
         await _cameraController.takePicture(imgPath);
         Navigator.pop(context, imgPath);
       } else {
@@ -94,7 +94,11 @@ class _TakePicturePageState extends State<TakePicturePage> {
                 padding: const EdgeInsets.all(8.0),
                 child: FloatingActionButton(
                   backgroundColor: Colors.orange,
-                  child:   _selectedIndex == 1 ? _isRec == true?Icon(Icons.pause, color: Colors.white):Icon(Icons.play_arrow, color: Colors.white) : Icon(Icons.camera, color: Colors.white),
+                  child: _selectedIndex == 1
+                      ? _isRec == true
+                          ? Icon(Icons.pause, color: Colors.white)
+                          : Icon(Icons.play_arrow, color: Colors.white)
+                      : Icon(Icons.camera, color: Colors.white),
                   onPressed: () {
                     _takePicture(context);
                   },
@@ -104,28 +108,28 @@ class _TakePicturePageState extends State<TakePicturePage> {
           ),
           _isRec == true
               ? SafeArea(
-            child: Container(
-              height: 30,
-              // alignment: Alignment.topLeft,
-              decoration: BoxDecoration(
-                color: Color(0xFFEE4400),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "REC",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                      color: Color(0xFFFAFAFA)),
-                ),
-              ),
-            ),
-          )
+                  child: Container(
+                    height: 30,
+                    // alignment: Alignment.topLeft,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFEE4400),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        "REC",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                            color: Color(0xFFFAFAFA)),
+                      ),
+                    ),
+                  ),
+                )
               : SizedBox(
-            height: 0,
-          )
+                  height: 0,
+                )
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
