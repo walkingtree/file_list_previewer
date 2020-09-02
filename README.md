@@ -28,7 +28,7 @@ A flutter package for viewing a list of local files in the form of clickable thu
 
 
 ##### Usage:
-
+//Either one of the attachmentList or filePaths should be passed
 >FileListPreviewer( <br />
 >    attachmentList : attachmentList <br />
 >    filePaths : filePaths <br />
@@ -37,5 +37,4 @@ A flutter package for viewing a list of local files in the form of clickable thu
 >    height : 10 <br />
 >    removeImage :  removeImage() <br />
 >  );
-
 
