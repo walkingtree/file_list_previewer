@@ -19,22 +19,20 @@ A flutter package for viewing a list of local files in the form of clickable thu
 
 #### Properties:
 
-```final List<File> attachmentList;```    *// Pass list of files*<br />
-```final List<String> filePaths;```       *// Pass list of filepaths*<br />
-```final Function removeImage;```         *// Pass a function which removes the file from the list of files/filepaths.*<br />
-```final String videoFileImage;```        *//Pass a image to show as video thumbnail* <br />
+```final List<File> attachmentList;```    *// the list of files to be displayed*<br />
+```final List<String> filePaths;```       *// the list of local filepaths of files to be displayed*<br />
+```final Function removeImage;```         *// An optional function parameter to handle file removal from the list of files/filepaths in parent widget*<br />
+```final String videoFileImage;```        *//The thumbnail image for video thumbnail to be used instead of default* <br />
 ```final double width;```                 *//Pass width for the widget*<br />
 ```final double height;```                *//Pass height for the widget*<br />
 
 
 ##### Usage:
-//Either one of the attachmentList or filePaths should be passed
->FileListPreviewer( <br />
->    attachmentList : attachmentList <br />
->    filePaths : filePaths <br />
->    videoFileImage : videoFileImage  <br />
->    width : 10  <br />
->    height : 10 <br />
->    removeImage :  removeImage() <br />
->  );
+*//Either one of the attachmentList or filePaths should be passed*
+```final List<File> attachmentList;```    *// the list of files to be displayed*<br />
+```final List<String> filePaths;```       *// the list of local filepaths of files to be displayed*<br />
+```final Function removeImage;```         *// An optional function parameter to handle file removal from the list of files/filepaths in parent widget*<br />
+```final String videoFileImage;```        *//The thumbnail image for video thumbnail to be used instead of default* <br />
+```final double width;```                 *//the width for the widget*<br />
+```final double height;```                *//the height for the widget*<br />
 
