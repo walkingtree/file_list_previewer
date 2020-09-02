@@ -68,7 +68,7 @@ class _ImageInputState extends State<ImageInput> {
         isExpanded: true,
         underline: SizedBox(),
         icon: Icon(Icons.attachment, color: Colors.green),
-        hint: Text("Attach Evidence", style: TextStyle(color: Colors.green)),
+        hint: Text("Attach Files", style: TextStyle(color: Colors.green)),
         items: [
           DropdownMenuItem(
             value: "1",
