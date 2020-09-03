@@ -1,6 +1,6 @@
 name: file_list_previewer
 description: A flutter package for viewing a list of local files in the form of clickable thumbnails.
-version: 0.0.1
+version: 0.0.2
 author: WalkingTree Technologies<support@walkingtree.tech>
 homepage: https://github.com/walkingtree/file_list_previewer
 
@@ -14,7 +14,6 @@ dependencies:
   flutter:
     sdk: flutter
   open_file: ^3.0.1
-  url_launcher: ^5.4.11
 
 dev_dependencies:
   flutter_test:
