@@ -20,8 +20,7 @@ A flutter package for viewing a list of local files in the form of clickable thu
 <br />
 <img src="https://github.com/walkingtree/file_list_previewer/blob/master/assets/images/2020-09-02%20(1).jpg" width="200">
 <br />
-![alt text](https://raw.githubusercontent.com/walkingtree/file_list_previewer/master/assets/images/2020-09-02%20(1).jpg)
-
+<img src="https://raw.githubusercontent.com/walkingtree/file_list_previewer/master/assets/images/2020-09-02%20(1).jpg" width="200">
 
 #### Properties:
 
