@@ -10,15 +10,15 @@ A flutter package for viewing a list of local files in the form of clickable thu
 
 ### Getting Started
 
-<img src="https://raw.githubusercontent.com/walkingtree/file_list_previewer/master/assets/images/2020-09-02.jpg" width="200">
+<img src="https://raw.githubusercontent.com/walkingtree/file_list_previewer/master/assets/images/2020-09-02.jpg" width="200" height="200">
 <br />
-<img src="https://raw.githubusercontent.com/walkingtree/file_list_previewer/master/assets/images/2020-09-02%20(2).jpg" width="200">
+<img src="https://raw.githubusercontent.com/walkingtree/file_list_previewer/master/assets/images/2020-09-02%20(2).jpg" width="200" height="200">
 <br />
-<img src="https://raw.githubusercontent.com/walkingtree/file_list_previewer/master/assets/images/2020-09-02%20(3).jpg" width="200">
+<img src="https://raw.githubusercontent.com/walkingtree/file_list_previewer/master/assets/images/2020-09-02%20(3).jpg" width="200" height="200">
 <br />
-<img src="https://raw.githubusercontent.com/walkingtree/file_list_previewer/master/assets/images/2020-09-02%20(4).jpg" width="200">
+<img src="https://raw.githubusercontent.com/walkingtree/file_list_previewer/master/assets/images/2020-09-02%20(4).jpg" width="200" height="200">
 <br />
-<img src="https://raw.githubusercontent.com/walkingtree/file_list_previewer/master/assets/images/2020-09-02%20(1).jpg" width="200">
+<img src="https://raw.githubusercontent.com/walkingtree/file_list_previewer/master/assets/images/2020-09-02%20(1).jpg" width="200" height="200">
 
 #### Properties:
 *//Either one of the attachmentList or filePaths should be passed*
