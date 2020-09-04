@@ -21,6 +21,7 @@ A flutter package for viewing a list of local files in the form of clickable thu
 <img src="https://raw.githubusercontent.com/walkingtree/file_list_previewer/master/assets/images/2020-09-02%20(1).jpg" width="200">
 
 #### Properties:
+*//Either one of the attachmentList or filePaths should be passed*
 
 ```final List<File> attachmentList;```    *// the list of files to be displayed*<br />
 ```final List<String> filePaths;```       *// the list of local filepaths of files to be displayed*<br />
@@ -31,12 +32,9 @@ A flutter package for viewing a list of local files in the form of clickable thu
 
 
 ##### Usage:
-*//Either one of the attachmentList or filePaths should be passed*
-```final List<File> attachmentList;```    *// the list of files to be displayed*<br />
-```final List<String> filePaths;```       *// the list of local filepaths of files to be displayed*<br />
-```final Function removeImage;```         *// An optional function parameter to handle file removal from the list of files/filepaths in parent widget*<br />
-```final String videoFileImage;```        *//The thumbnail image for video thumbnail to be used instead of default* <br />
-```final double width;```                 *//the width for the widget*<br />
-```final double height;```                *//the height for the widget*<br />
 
-
+>   FileListPreviewer(
+>              removeImage: _removeImage,
+>              attachmentList: attachmentList,
+>              filePaths: fileattachmentList,
+>            ),

@@ -71,7 +71,7 @@ class _FileListPreviewerState extends State<FileListPreviewer> {
     return MediaQuery(
       data: new MediaQueryData.fromWindow(ui.window),
       child: Directionality(
-        textDirection: TextDirection.ltr,
+        textDirection: TextDirection.rtl,
         child: SingleChildScrollView(
           key: ValueKey('singlechildkey'),
           child: Container(
